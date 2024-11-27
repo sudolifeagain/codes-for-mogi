@@ -3,7 +3,7 @@ title: "【模擬国連】funDRの回答を自動で結合するスクリプト"
 emoji: "✏️" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["スプレッドシート", "googleフォーム", "GAS"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: true # false（falseにすると下書き）
+published: true 
 ---
 
 ## プレビュー
