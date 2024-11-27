@@ -97,3 +97,5 @@ https://github.com/sudolifeagain/codes-for-mgi/blob/main/codes/funDR-editing.gs
 
 ## ちょっとした応用
 GASスクリプト自体の編集ができる方は、GASの画面にて各種設定値をいじってカスタマイズできます。コメントアウトしてある部分でおおよそわかると思うのでいい感じに弄っちゃってください。
+
+最後まで読んでいただきありがとうございました。
