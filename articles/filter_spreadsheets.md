@@ -1,4 +1,4 @@
----
+    ---
 title: Googleスプレッドシートのフィルタ表示を理解する
 emoji: 😸
 type: tech
