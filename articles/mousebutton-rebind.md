@@ -20,5 +20,5 @@ googleで「マウス　キー操作　割り当て」などで調べると、�
 -インストールが終わると自動的に起動し、タスクトレイの中に格納される
 
 ### 操作
-- タスクトレイの中から<img src="image.png" width="02%">のアイコンを探し右クリック→Setupをクリック
+- タスクトレイの中から![image](https://github.com/user-attachments/assets/93f6dd66-ab1d-4c36-ae12-6c8eca8b8ee3)のアイコンを探し右クリック→Setupをクリック
 - この画面が基本の操作画面。![image-1](https://github.com/user-attachments/assets/4d5d7da7-a7bd-4120-a07e-2dd7f17e99cf)
