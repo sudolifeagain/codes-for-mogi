@@ -14,7 +14,7 @@ published: true
 - フォームの編集画面からスクリプトエディタに移動し、以下のコードを張り付ける
 ```gas:endFormCheck.gs
 function endFormCheck() {
-  var LIMIT_NUMBER = 200; 
+  var LIMIT_NUMBER = 200;
   var answer = FormApp.getActiveForm();
 
  if (answer.getResponses().length >= LIMIT_NUMBER) {
@@ -40,4 +40,5 @@ function endFormCheck() {
    - フォームの回答を締め切った場合にdiscordに通知を投げたい
      - webhookかな
      - チャンネルだといろんな人に通知行ってしまうので、スレッドが好ましい
-   
+
+読んでいただきありがとうございました。
