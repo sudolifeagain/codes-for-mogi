@@ -1,6 +1,6 @@
 ---
 title: Webhookを用いてdiscordにサイレントメッセージを送信する
-emoji: 😸
+emoji: 💌
 type: tech
 topics: [webhook, Discord]
 published: false
