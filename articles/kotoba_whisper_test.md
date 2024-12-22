@@ -589,3 +589,12 @@ else:
     print(f"Failed to send webhook notification. Status code: {response.status_code}, Response: {response.text}")
 
 ```
+
+## 参照サイト
+[kotoba-tech/kotoba-whisper-v2.0-faster · Hugging Face](https://huggingface.co/kotoba-tech/kotoba-whisper-v2.0-faster)
+[kotoba-whisper v2.0お試し｜Take](https://note.com/ample_rose4964/n/n4fb540a463a0)
+
+## 感想
+モデルを導入→動作まで完結できたのでとりあえず嬉しい。
+ただ、さらに高速化する方法もありそうなのでそちらの方も試してみたい。
+[ほぼリアルタイム！？爆速で動作する日本語特化の文字起こしAI！『kotoba-whisper-v2.0』 #Python - Qiita](https://qiita.com/ryosuke_ohori/items/9634c1fd8a9cc9ff7c36)これ
