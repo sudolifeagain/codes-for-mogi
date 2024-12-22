@@ -2,7 +2,7 @@
 title: Googleスプレッドシートのフィルタ表示を理解する
 emoji: 😸
 type: tech
-topics: [Google Workspace, Spreadsheets]
+topics: [GoogleWorkspace, Spreadsheets]
 published: false
 ---
 
@@ -40,3 +40,4 @@ published: false
 
 「フィルタ」
 選択した範囲で右クリック→オプションから「ファイルを作成」でできます。
+
