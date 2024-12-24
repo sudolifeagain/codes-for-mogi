@@ -16,6 +16,7 @@ Discordにはサイレントメッセージという、送信するメッセー�
 ![image](https://github.com/user-attachments/assets/570e550e-276d-466c-a3e9-fa9e324aae1f)
 *鈴のアイコンの上でホバーすると「これは「@silent」のメッセージです」と表示される。*
 
+深夜の作業時など、今すぐ相手に通知を飛ばしたくはないが、Discordを開いた時に見逃してほしくない時などがサイレントメッセージの活用場面になる。
 このサイレントメッセージを、Webhookを用いたメッセージ送信の際にも適用できるようにしたい
 
 ### Webhookとは
@@ -28,11 +29,12 @@ Discordにはサイレントメッセージという、送信するメッセー�
 
 ```js:sample code
 function sendSilentMessageToDiscord() {
-  const webhookUrl = "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"; // Webhook URLを入れる場所
+  const scriptProperties = PropertiesService.getScriptProperties();
+  const webhookUrl = scriptProperties.getProperty('DISCORD_WEBHOOK_URL');
 
   const payload = {
-    content: "", // contentはいったん空にしてある 好きに設定すると良い
-    flags: 4096  // 4096フラグで通知をサイレントに設定
+    content: "",
+    flags: 4096,
   };
 
   const options = {
@@ -49,8 +51,16 @@ function sendSilentMessageToDiscord() {
   }
 }
 ```
+上のコードはGASのスクリプトプロパティを使用してwebhookのURLを格納しているので、時の文で定義したいときは以下のように書き換える。
 
-要するにpayloadのオプションとして`flags: 4096`を入れてあげればサイレントメッセージになるよというだけのお話でした
+```js
+ const webhookUrl = "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"; // Webhook URLを入れる場所
+```
+
+
+## まとめ
+サイレントメッセージ化するには、payloadのオプションとして`flags: 4096`を入れてあげる必要があるよというお話でした。
+
 
 
 
