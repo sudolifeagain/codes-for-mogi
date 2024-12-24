@@ -31,7 +31,7 @@ Outgoing Webhook
 Incoming Webhook
 外部のアプリケーションやサービスから送信されたHTTPリクエストを受け取るもの（例：チャットツールで特定のメッセージが投稿された際に通知を受け取る）。
 
-今回作成するGASはoutgoing webhookに該当するものになる。
+今回作成すコードはGASにてoutgoing webhookに該当するコードとなる。
 
 ## 実装
 
