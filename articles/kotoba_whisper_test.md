@@ -17,26 +17,6 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 新機能と改善のために最新の PowerShell をインストールしてください!https://aka.ms/PSWindows
 
-PS C:\Users\YN> vi ~/.bash_profile
-vi : 用語 'vi' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。名
-前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。
-発生場所 行:1 文字:1
-+ vi ~/.bash_profile
-+ ~~
-    + CategoryInfo          : ObjectNotFound: (vi:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
-
-PS C:\Users\YN> cd ~
-PS C:\Users\YN> cd~
-cd~ : 用語 'cd~' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。
-名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください
-。
-発生場所 行:1 文字:1
-+ cd~
-+ ~~~
-    + CategoryInfo          : ObjectNotFound: (cd~:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
-
 PS C:\Users\YN> mkdir huggingface_project
 
 
@@ -47,37 +27,25 @@ Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
 d-----        2024/12/23      1:46                huggingface_project
 
+```
+huggingface_projectという名前のディレクトリを作成する
+```
 
 PS C:\Users\YN> cd huggingface_project
-PS C:\Users\YN\huggingface_project> python3 -m venv venv
-Python
-PS C:\Users\YN\huggingface_project> python3 -m venv venv
-Python
-PS C:\Users\YN\huggingface_project> python3 --version
-Python
+```
+ 「venv」という名の仮想環境を作成するコマンドプロンプト
+```
 PS C:\Users\YN\huggingface_project> python -m venv venv
-PS C:\Users\YN\huggingface_project> source venv/bin/activate
-source : 用語 'source' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されま
-せん。名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してく
-ださい。
-発生場所 行:1 文字:1
-+ source venv/bin/activate
-+ ~~~~~~
-    + CategoryInfo          : ObjectNotFound: (source:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
 
-PS C:\Users\YN\huggingface_project> .\venv\Scripts\Activate.ps1
-.\venv\Scripts\Activate.ps1 : このシステムではスクリプトの実行が無効になっているため、ファイル C:\Users\YN\huggingface_
-project\venv\Scripts\Activate.ps1 を読み込むことができません。詳細については、「about_Execution_Policies」(https://go.m
-icrosoft.com/fwlink/?LinkID=135170) を参照してください。
-発生場所 行:1 文字:1
-+ .\venv\Scripts\Activate.ps1
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : セキュリティ エラー: (: ) []、PSSecurityException
-    + FullyQualifiedErrorId : UnauthorizedAccess
 PS C:\Users\YN\huggingface_project> Get-ExecutionPolicy
 Restricted
+```
+コマンドの実行ポリシーが通常だと制限されているので実行可能なように設定を変更する
+```
 PS C:\Users\YN\huggingface_project> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+[PowerShellのExecutionPolicyのスコープとかについて詳しく #PowerShell - Qiita](https://qiita.com/kikuchi/items/59f219eae2a172880ba6) が詳しい
+```
 PS C:\Users\YN\huggingface_project> Get-ExecutionPolicy
 Bypass
 PS C:\Users\YN\huggingface_project> .\venv\Scripts\Activate.ps1
@@ -173,14 +141,6 @@ Successfully installed av-14.0.1 certifi-2024.12.14 charset-normalizer-3.4.0 col
 
 [notice] A new release of pip is available: 24.2 -> 24.3.1
 [notice] To update, run: python.exe -m pip install --upgrade pip
-(venv) PS C:\Users\YN\huggingface_project> from faster_whisper import WhisperModel
-発生場所 行:1 文字:1
-+ from faster_whisper import WhisperModel
-+ ~~~~
-このバージョンの言語では、'from' キーワードがサポートされていません。
-    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
-    + FullyQualifiedErrorId : ReservedKeywordNotAllowed
-
 (venv) PS C:\Users\YN\huggingface_project> wget https://huggingface.co/kotoba-tech/kotoba-whisper-v1.0-ggml/resolve/main/sample_ja_speech.wav
 
 
@@ -197,62 +157,9 @@ Headers           : {[Connection, keep-alive], [x-amz-storage-class, INTELLIGENT
                     n, AES256], [x-amz-version-id, null]...}
 RawContentLength  : 6639070
 
-
-
-(venv) PS C:\Users\YN\huggingface_project> from faster_whisper import WhisperModel
-発生場所 行:1 文字:1
-+ from faster_whisper import WhisperModel
-+ ~~~~
-このバージョンの言語では、'from' キーワードがサポートされていません。
-    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
-    + FullyQualifiedErrorId : ReservedKeywordNotAllowed
-
-(venv) PS C:\Users\YN\huggingface_project>
-(venv) PS C:\Users\YN\huggingface_project> model = WhisperModel("kotoba-tech/kotoba-whisper-v2.0-faster")
-model : 用語 'model' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されませ
-ん。名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してくだ
-さい。
-発生場所 行:1 文字:1
-+ model = WhisperModel("kotoba-tech/kotoba-whisper-v2.0-faster")
-+ ~~~~~
-    + CategoryInfo          : ObjectNotFound: (model:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
-
-(venv) PS C:\Users\YN\huggingface_project>
-(venv) PS C:\Users\YN\huggingface_project> segments, info = model.transcribe("sample_ja_speech.wav", language="ja", chunk_length=15, condition_on_previous_text=False)
-発生場所 行:1 文字:9
-+ segments, info = model.transcribe("sample_ja_speech.wav", language="j ...
-+         ~
-パラメーター一覧に引数が存在しません。
-発生場所 行:1 文字:58
-+ segments, info = model.transcribe("sample_ja_speech.wav", language="j ...
-+                                                          ~
-',' の後に式が存在しません。
-発生場所 行:1 文字:59
-+ ... info = model.transcribe("sample_ja_speech.wav", language="ja", chunk_ ...
-+                                                     ~~~~~~~~~~~~~
-式またはステートメントのトークン 'language="ja"' を使用できません。
-発生場所 行:1 文字:58
-+ segments, info = model.transcribe("sample_ja_speech.wav", language="j ...
-+ ... v", language="ja", chunk_length=15, condition_on_previous_text=False)
-+                                                                         ~
-式またはステートメントのトークン ')' を使用できません。
-    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
-    + FullyQualifiedErrorId : MissingArgument
-
-(venv) PS C:\Users\YN\huggingface_project> for segment in segments:
-発生場所 行:1 文字:4
-+ for segment in segments:
-+    ~
-キーワード 'for' の後に始めの '(' が存在しません。
-    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
-    + FullyQualifiedErrorId : MissingOpenParenthesisAfterKeyword
-
-(venv) PS C:\Users\YN\huggingface_project>     print("[%.2fs -> %.2fs] %s" % (segment.start, segment.end, segment.text))
-
-発生場所 行:1 文字:49
-+     print("[%.2fs -> %.2fs] %s" % (segment.start, segment.end, segmen ...
-    + FullyQualifiedErrorId : MissingArgument
+```
+Pythonコマンド
+```
 
 (venv) PS C:\Users\YN\huggingface_project> python
 Python 3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)] on win32
